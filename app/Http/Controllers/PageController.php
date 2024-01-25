@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\comic;
+use App\Models\Comic;
 
 class PageController extends Controller
 {
@@ -12,9 +12,9 @@ class PageController extends Controller
      */
     public function index()
     {
-        $comics = comic::all();
+        $comics = Comic::all();
 
-        return view("comics.index");
+        return view("Comic.index");
     }
 
     /**

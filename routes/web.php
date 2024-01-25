@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\PageController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,3 +17,5 @@ Route::get('/', function () {
     $dati = config("data");
     return view('home', $dati);
 })->name("home");
+
+Route::resource("comics", PageController::class);
