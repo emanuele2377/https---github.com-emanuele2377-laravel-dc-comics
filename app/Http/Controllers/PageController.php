@@ -58,7 +58,7 @@ class PageController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        return view("comics.edit", compact("comic"));
     }
 
     /**

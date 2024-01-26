@@ -6,7 +6,7 @@
             <h2>Fumetti</h2>
         </div>
         <div class="row">
-            @foreach ($comic as $comic)
+            @foreach ($comics as $comic)
                 <div class="col-4 pb-4">
                     <div class="card" style="height: 100%;">
                         @if ($comic->title)
