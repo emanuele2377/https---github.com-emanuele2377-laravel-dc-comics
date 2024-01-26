@@ -14,7 +14,7 @@ class PageController extends Controller
     {
         $comics = Comic::all();
 
-        return view("Comics.index");
+        return view("Comics.index",  compact("comics"));
     }
 
     /**
@@ -42,7 +42,7 @@ class PageController extends Controller
         $comic->type = $data["comic book"];
         $comic->save();
 
-        // return view("pastas.show", compact("pasta"));
+        return redirect()->route('comics.show', $comic->id);
     }
 
     /**
