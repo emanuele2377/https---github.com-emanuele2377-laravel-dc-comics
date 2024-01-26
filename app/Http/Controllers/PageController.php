@@ -14,6 +14,7 @@ class PageController extends Controller
     {
         $comics = Comic::all();
 
+
         return view("Comics.index",  compact("comics"));
     }
 
