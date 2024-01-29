@@ -1,24 +1,27 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container">
-        <div class="row">
-            <h2>Fumetti</h2>
-        </div>
+<div>
+    <h2>Fumetti</h2>
+</div>
+      <div class="container-fluid">
         <div class="row">
             @foreach ($comics as $comic)
-                <div class="col-4 pb-4">
-                    <div class="card" style="height: 100%;">
-                        @if ($comic->title)
-                            <img src="{{ $comic->description }}" class="card-img-top" alt="{{ $comic->price }}">
-                        @else
-                            <img src="https://www.coverbrowser.com/image/action-comics/1-1.jpg"
+                <div class="col-3 pb-4">
+                      <div class="card" style="width: 50%;">
+                           @if ($comic->thumb)
+                            <img src="{{ $comic->thumb }}" class="card-img-top">
+                            @else
+                              <img src=""
                                 class="card-img-top" alt="{{ $comic->thumb }}">
-                        @endif
-                        </div>
-                    </div>
+                            @endif
+                            <div class="card-body">
+                                <h5 class="card-title">{{ $comic->title }}</h5>
+                            </div>
+                       </div>
+                </div>
                 </div>
             @endforeach
+     
         </div>
-    </div>
 @endsection

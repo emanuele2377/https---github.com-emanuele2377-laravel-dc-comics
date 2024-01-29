@@ -31,19 +31,6 @@ class PageController extends Controller
      */
     public function store(Request $request)
     {
-        $data = $request->all();
-
-        $comic = new Comic();
-        $comic->title = $data["title"];
-        $comic->description = $data["description"];
-        $comic->thumb = $data["link"];
-        $comic->price = $data["price"];
-        $comic->series = $data[""];
-        $comic->sale_date = $data[""];
-        $comic->type = $data["comic book"];
-        $comic->save();
-
-        return redirect()->route('comics.show', $comic->id);
     }
 
     /**
