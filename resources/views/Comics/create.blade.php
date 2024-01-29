@@ -25,14 +25,6 @@
                     <label for="image" class="form-label">image</label>
                     <input type="text" class="form-control" id="image" name="image">
                 </div>
-                <div class="mb-3">
-                    <label for="cooking_time" class="form-label">cooking_time</label>
-                    <input type="text" class="form-control" id="cooking_time" name="cooking_time">
-                </div>
-                <div class="mb-3">
-                    <label for="weight" class="form-label">weight</label>
-                    <input type="text" class="form-control" id="weight" name="weight">
-                </div>
                 <button type="submit" class="btn btn-primary">Inserisci</button>
             </form>
         </div>
